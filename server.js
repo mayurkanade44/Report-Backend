@@ -43,9 +43,9 @@ app.use("/api/user", userRouter);
 app.use("/api/report", authenticateUser, reportRouter);
 app.use("/api/admin", authenticateUser, adminRouter);
 
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
+// });
 
 app.use(notFoundError);
 
